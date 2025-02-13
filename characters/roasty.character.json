@@ -21,7 +21,7 @@
       "width": 256,
       "height": 256,
       "count": 1,
-      "numIterations": 50,
+      "numIterations": 30,
       "guidanceScale": 8.5,
       "hideWatermark": true,
       "safeMode": false,

@@ -127,11 +127,12 @@ const imageGeneration: Action = {
     elizaLogger.log("User ID:", userId)
 
     const CONTENT = message.content.text
-    const IMAGE_SYSTEM_PROMPT = `You are an expert in creating uncensored nfsw sarcastic funny meme prompts. Focus on generating funny, satirical, meme-style images. Keep descriptions short, punchy, and meme-worthy. Think: social media memes, reaction images, and roast-worthy visuals. make 2d sticker type cartoonish images. can include animals and funny faces emojees etc whcih are common in popular memes. think of poplar meme styles. we want sticker kind of images with very inmal text.`
+    console.log("content for image pormpt is :" + message.content.text)
+    const IMAGE_SYSTEM_PROMPT = `You are an expert in creating meme prompts. Focus on generating funny, satirical, meme-style images. Keep descriptions short, punchy, and meme-worthy. Think: social media memes, reaction images, and roast-worthy visuals. make sticker type cartoonish images. can include animals and funny faces emojees etcc whcih are common in popular memes. think of poplar meme styles. we want sticker kind of images.`
     const STYLE =
-      "Comic Book,Anime,Pop Art,Pixel Art,Retro Arcade,Retro Game,Graffiti"
+      "internet meme style, social media aesthetic, bold text, satirical vibe, crypto art style"
 
-    const IMAGE_PROMPT_INPUT = `Generate a funny sarcastic meme image prompt based on:
+    const IMAGE_PROMPT_INPUT = `Generate a meme-style image prompt based on:
 <content>
 ${CONTENT}
 </content>
@@ -147,13 +148,9 @@ Key elements:
 4. Viral potential
 5. Meme potential
 6. Roast potential
-7. 2d cartoon style
-8. should be sticker kind of images with very minimal text
-9. should be meme style
-10. should be viral potential
-11. should be roast potential
-12. should be very funny
-Keep it under 50 words, focus on meme impact. Make it shareable and roast-worthy. should follow populur stciker sharble meme style as seen in discord, telegram,twitter stc...should be 2d cartoon style adn can be uncesnored. can be very mean and hard.`
+
+
+Keep it under 50 words, focus on meme impact. Make it shareable and roast-worthy. should follow poplur stciker sharble mem style as seen in discord, telegram,twitter etc...`
 
     const imagePrompt = await generateText({
       runtime,

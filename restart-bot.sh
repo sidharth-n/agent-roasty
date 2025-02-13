@@ -18,4 +18,4 @@ pkill -9 -f "node.*characters/roasty"
 
 echo "Starting bot..."
 # Start the bot
-pnpm run dev --characters="characters/roasty.character.json" 
+pnpm run dev --characters="characters/agent-roasty.character.json" 
