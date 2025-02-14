@@ -128,7 +128,7 @@ const imageGeneration: Action = {
 
     const CONTENT = message.content.text
     console.log("content for image pormpt is :" + message.content.text)
-    const IMAGE_SYSTEM_PROMPT = `You are an expert in creating meme prompts. Focus on generating funny, satirical, meme-style images. Keep descriptions short, punchy, and meme-worthy. Think: social media memes, reaction images, and roast-worthy visuals. make sticker type cartoonish images. can include animals and funny faces emojees etcc whcih are common in popular memes. think of poplar meme styles. we want sticker kind of images.`
+    const IMAGE_SYSTEM_PROMPT = `You are an expert in creating meme prompts. Focus on generating very creative but minimal funny, satirical, meme-style images. Keep descriptions short, punchy, and meme-worthy. Think: social media memes, reaction images, and roast-worthy visuals. make sticker type cartoonish 2D images. can include animals and funny faces, emojees,expressions etc.. which are common in popular memes. think of popular meme styles. we want sticker kind of images.use very minmal text in images only if needed. if text isused limit to 3-4 words max. but funnya dn apt for the scenario. makse sure not to fill the image with too much things.`
     const STYLE =
       "internet meme style, social media aesthetic, bold text, satirical vibe, crypto art style"
 
@@ -142,15 +142,17 @@ ${STYLE}
 </style>
 
 Key elements:
-1. Meme format (reaction image, social post, etc)
+1. Meme format (reaction image, social post, etc)s
 2. Main visual joke/punchline
 3. Minimal clear text
 4. Viral potential
 5. Meme potential
 6. Roast potential
+7.cartoon style
+8.funny faces/animals
 
 
-Keep it under 50 words, focus on meme impact. Make it shareable and roast-worthy. should follow poplur stciker sharble mem style as seen in discord, telegram,twitter etc...`
+Keep it under 50 words, should follow populur stciker sharable meme style as seen in online roasts communities. should be very funny and sarcastc. be very creative.s`
 
     const imagePrompt = await generateText({
       runtime,
